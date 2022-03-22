@@ -1,0 +1,12 @@
+sensor.name = 'Ring RT/Duroid 5880 0.787mm 3GHz';
+sensor.epsilon_r_teo = 2.2;
+sensor.tandelta = 0.0004;
+sensor.w = 2.4451e-3;
+sensor.h = 0.787e-3;
+sensor.t = 0.035e-3;
+sensor.Z0 = 50; %teorikoki
+sensor.r = 11.5929e-3;
+sensor.method = 'R';
+sensor.fr = 2.97e9;
+sensor.n = 1;
+sensor.CST_data = 'C:\Alex\TFG\Resultados\RT_Duroid_5880_0787_3GHz\RT_Duroid_5880_0787.s2p';

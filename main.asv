@@ -1,0 +1,42 @@
+%%Date: 2022
+%%Author contact: alexander.ugena@gmail.com
+%%Description: Programa principal para calcular permitividad del material
+%%Dependencies: calc_epsilon_r, sensor_example
+
+%Sensorea irakurri:
+ RT_Duroid_5880_0127_3GHz
+ 
+% %S parametroak eta maiztasuna irakurri:
+S_0 = sparameters(sensor.CST_data);
+S21_0 = rfparam(S_0,2,1);
+S21_dB_0 = mag2db(abs(S21_0));
+f0 = S_0.Frequencies;
+
+% RT_Duroid_5880_0254_3GHz
+% 
+% 
+% S_1 = sparameters(sensor.CST_data);
+% S21_1 = rfparam(S_1,2,1);
+% S21_dB_1 = mag2db(abs(S21_1));
+% f1 = S_1.Frequencies;
+% 
+% RT_Duroid_5880_0787_3GHz
+% 
+% 
+% S_2 = sparameters(sensor.CST_data);
+% S21_2 = rfparam(S_2,2,1);
+% S21_dB_2 = mag2db(abs(S21_2));
+% f2 = S_2.Frequencies;
+% 
+% %S parametroak irudikatu:
+% plot(f0,S21_dB_0,f1,S21_dB_1,f2,S21_dB_2);
+% legend('h=0.127mm','h=0.254mm','h=0.787mm','Interpreter','Latex');
+% title('RT/Duroid 5880','Interpreter','Latex');
+% xlabel('f(GHz)','Interpreter','Latex');
+% ylabel('$S_{21}$(dB)','Interpreter','Latex');
+
+%Permitibitate erlatiboa kalkulatu:
+epsilon_r = calc_epsilon_r(sensor);
+
+
+%TODO tan(delta)-ren kalkulua falta da

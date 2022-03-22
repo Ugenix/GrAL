@@ -1,0 +1,12 @@
+sensor.name = 'Ring Arlon 25N 0.762mm 600MHz Exp.';
+sensor.epsilon_r_teo = 3.38;
+sensor.tandelta = 0.0025;
+sensor.w = 1.401e-3;
+sensor.h = 0.64e-3;
+sensor.t = 0.035e-3;
+sensor.Z0 = 50; %teorikoki
+sensor.r = 49.2415e-3;
+sensor.method = 'R';
+sensor.fr = 0.638e9;
+sensor.n = 1;
+sensor.CST_data = 'C:\Alex\TFG\Resultados\Arlon 25N\Arlon25N_600MHz_exp.s2p';

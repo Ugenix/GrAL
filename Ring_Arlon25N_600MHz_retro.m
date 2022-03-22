@@ -1,0 +1,11 @@
+sensor.name = 'Ring Arlon 25N 600MHz Retro';
+sensor.epsilon_r_teo = 3.38;
+sensor.w = 1.296e-3;
+sensor.h = 0.6e-3;
+sensor.t = 0.035e-3;
+sensor.Z0 = 50; %teorikoki
+sensor.r = 49.895e-3;
+sensor.method = 'R';
+sensor.fr = 3.0328e9;
+sensor.n = 1;
+sensor.CST_data = '';
