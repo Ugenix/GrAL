@@ -1,0 +1,119 @@
+f = linspace(20,2e6,201);
+
+
+C08_1 = readmatrix("E498x240.csv");
+C08_2 = readmatrix("E498x245.csv");
+C08_3 = readmatrix("E498x250.csv");
+C08_4 = readmatrix("E498x255.csv");
+C08_5 = readmatrix("E498x260.csv");
+C08_6 = readmatrix("E498x265.csv");
+C08 = [C08_1(:,1) C08_2(:,1) C08_3(:,1) C08_4(:,1) C08_5(:,1) C08_6(:,1)];
+
+C10_1 = readmatrix("E498x241.csv");
+C10_2 = readmatrix("E498x246.csv");
+C10_3 = readmatrix("E498x251.csv");
+C10_4 = readmatrix("E498x256.csv");
+C10_5 = readmatrix("E498x261.csv");
+C10_6 = readmatrix("E498x266.csv");
+C10 = [C10_1(:,1) C10_2(:,1) C10_3(:,1) C10_4(:,1) C10_5(:,1) C10_6(:,1)];
+
+C12_1 = readmatrix("E498x242.csv");
+C12_2 = readmatrix("E498x247.csv");
+C12_3 = readmatrix("E498x252.csv");
+C12_4 = readmatrix("E498x257.csv");
+C12_5 = readmatrix("E498x262.csv");
+C12_6 = readmatrix("E498x267.csv");
+C12 = [C12_1(:,1) C12_2(:,1) C12_3(:,1) C12_4(:,1) C12_5(:,1) C12_6(:,1)];
+
+C14_1 = readmatrix("E498x243.csv");
+C14_2 = readmatrix("E498x248.csv");
+C14_3 = readmatrix("E498x253.csv");
+C14_4 = readmatrix("E498x258.csv");
+C14_5 = readmatrix("E498x263.csv");
+C14_6 = readmatrix("E498x268.csv");
+C14 = [C14_1(:,1) C14_2(:,1) C14_3(:,1) C14_4(:,1) C14_5(:,1) C14_6(:,1)];
+
+C16_1 = readmatrix("E498x244.csv");
+C16_2 = readmatrix("E498x249.csv");
+C16_3 = readmatrix("E498x254.csv");
+C16_4 = readmatrix("E498x259.csv");
+C16_5 = readmatrix("E498x264.csv");
+%C16_6 = readmatrix("E498x269.csv");
+%C16 = [C16_1(:,1) C16_2(:,1) C16_3(:,1) C16_4(:,1) C16_5(:,1) C16_6(:,1)];
+
+%Grafikoak
+figure(1)
+for i=1:6
+    if i==1 || i== 2 || i==4
+        p3 = plot(f,C08(:,i),'Marker','o','MarkerSize',2.5);
+        hold on
+    else
+        p4 = plot(f,C08(:,i),'Marker','^','MarkerSize',2.5);
+        hold on
+    end
+end
+hold off 
+title('8mm^2-ko kondentsadoreak','Interpreter','Latex');
+xlabel('f (Hz)','Interpreter','Latex');
+ylabel('C (F)','Interpreter','Latex');
+
+figure(2)
+for i=1:6
+    if i==1 || i== 2 || i==4
+        p3 = plot(f,C10(:,i),'Marker','o','MarkerSize',2.5);
+        hold on
+    else
+        p4 = plot(f,C10(:,i),'Marker','^','MarkerSize',2.5);
+        hold on
+    end
+end
+hold off 
+title('10mm^2-ko kondentsadoreak','Interpreter','Latex');
+xlabel('f (Hz)','Interpreter','Latex');
+ylabel('C (F)','Interpreter','Latex');
+
+figure(3)
+for i=1:6
+    if i==1 || i== 2 || i==4
+        p3 = plot(f,C12(:,i),'Marker','o','MarkerSize',2.5);
+        hold on
+    else
+        p4 = plot(f,C12(:,i),'Marker','^','MarkerSize',2.5);
+        hold on
+    end
+end
+hold off
+title('12mm^2-ko kondentsadoreak','Interpreter','Latex');
+xlabel('f (Hz)','Interpreter','Latex');
+ylabel('C (F)','Interpreter','Latex');
+
+figure(4)
+for i=1:6
+    if i==1 || i== 2 || i==4
+        p3 = plot(f,C14(:,i),'Marker','o','MarkerSize',2.5);
+        hold on
+    else
+        p4 = plot(f,C14(:,i),'Marker','^','MarkerSize',2.5);
+        hold on
+    end
+end
+hold off 
+title('14mm^2-ko kondentsadoreak','Interpreter','Latex');
+xlabel('f (Hz)','Interpreter','Latex');
+ylabel('C (F)','Interpreter','Latex');
+
+
+% figure(5)
+% for i=1:6
+%     if i==1 || i== 2 || i==4
+%         p3 = plot(f,C16(:,i),'Marker','o','MarkerSize',2.5);
+%         hold on
+%     else
+%         p4 = plot(f,C16(:,i),'Marker','^','MarkerSize',2.5);
+%         hold on
+%     end
+% end
+% hold off
+% title('16mm^2-ko kondentsadoreak','Interpreter','Latex');
+% xlabel('f (Hz)','Interpreter','Latex');
+% ylabel('C (F)','Interpreter','Latex');
